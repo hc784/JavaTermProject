@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+#    url: jdbc:mysql://myblogdb123.c9ki6m08gnkp.ap-northeast-2.rds.amazonaws.com/mydb
+    url: jdbc:mysql://localhost:3306/javaBoard
+    username: root
+    password: 0203wcar
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update        # 개발단계
+    properties:
+      hibernate:
+        format_sql: true
+
+
+jwt:
+  secret: ChangeMeToVeryLongRandomSecretKeyForHS512
+  expire-seconds: 3600
